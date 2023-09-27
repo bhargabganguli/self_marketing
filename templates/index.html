@@ -1,0 +1,1091 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+    <head>
+		{% load static %}
+        <!-- meta data -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+        <!--font-family-->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&amp;subset=devanagari,latin-ext" rel="stylesheet">
+        
+        <!-- title of site -->
+        <title>Bhargab Ganguli</title>
+
+        <!-- For favicon png -->
+		<link rel="shortcut icon" type="image/icon" href="{% static 'assets/logo/dp2.jpg' %}"/>
+       
+        <!--font-awesome.min.css-->
+        <link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css' %}">
+
+		<!--flat icon css-->
+		<link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
+
+		<!--animate.css-->
+        <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+
+        <!--owl.carousel.css-->
+        <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+		<link rel="stylesheet" href="{% static 'assets/css/owl.theme.default.min.css' %}">
+		
+        <!--bootstrap.min.css-->
+        <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+		
+		<!-- bootsnav -->
+		<link rel="stylesheet" href="{% static 'assets/css/bootsnav.css' %}" >	
+        
+        <!--style.css-->
+        <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+        
+        <!--responsive.css-->
+        <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+        
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		
+        <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+		<style>
+ 		/* Loader CSS */
+		.overlay{
+          display: none;
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          z-index: 999;
+          background: rgba(255,255,255,0.8) url("{% static 'assets/loader/loader.gif' %}") center no-repeat;
+      	}
+		/* Turn off scrollbar when body element has the loading class */
+		body.loading{
+          overflow: hidden;   
+		}
+		/* Make spinner image visible when body element has the loading class */
+		body.loading .overlay{
+			display: block;
+		}
+
+
+
+
+		/* Gantt chart css */
+		.chartMenu {
+        width: 100%;
+        height: 5%;
+        background: #0fbde9;
+        color: rgb(17, 16, 17);
+		padding: 5px 480px;
+      }
+      .chartMenu p {
+        padding: 50px;
+        font-size: 20px;
+      }
+      .chartCard {
+        width: 100%;
+        height: calc(100vh - 40px);
+        background: rgba(54, 162, 235, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .chartBox {
+		width: 100%;
+		height: 50%;
+        display: inline-block;
+        padding: 0px;
+        border-radius: 20px;
+        border: solid 3px rgba(54, 162, 235, 1);
+        background: rgb(255, 234, 234);
+      }
+	  @media only screen and(max-width: 600px){
+		.chartBox{
+			width: 90%;
+			height: 45%;
+		}
+	  }
+
+		</style>
+
+    </head>
+	
+	<body>
+
+		
+		
+
+		<!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+		
+		<!-- top-area Start -->
+		<header class="top-area">
+			<div class="header-area">
+				<!-- Start Navigation -->
+			    <nav class="navbar navbar-default bootsnav navbar-fixed dark no-background">
+
+			        <div class="container">
+
+			            <!-- Start Header Navigation -->
+			            <div class="navbar-header">
+			                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+			                    <i class="fa fa-bars"></i>
+			                </button>
+			                <a class="navbar-brand" href="/">Bhargab</a>
+			            </div><!--/.navbar-header-->
+			            <!-- End Header Navigation -->
+
+			            <!-- Collect the nav links, forms, and other content for toggling -->
+			            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+			                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+			                <li class=" smooth-menu active"></li>
+			                    <li class="smooth-menu"><a href="#education">education</a></li>
+			                    <li class="smooth-menu"><a href="#skills">skills</a></li>
+			                    <li class="smooth-menu"><a href="#experience">experience</a></li>
+			                    <li class="smooth-menu"><a href="#profiles">profile</a></li>
+			                    <li class="smooth-menu"><a href="#projects">projects</a></li>
+			                    <li class="smooth-menu"><a href="#orgs">Organizations</a></li>
+								<li class="smooth-menu"><a href="#extracurricular_activity">extracurricular <br> activity</a>
+			                    <li class="smooth-menu"><a href="#contact">contact</a></li>
+			                </ul><!--/.nav -->
+			            </div><!-- /.navbar-collapse -->
+			        </div><!--/.container-->
+			    </nav><!--/nav-->
+			    <!-- End Navigation -->
+			</div><!--/.header-area-->
+
+		    <div class="clearfix"></div>
+
+		</header><!-- /.top-area-->
+		<!-- top-area End -->
+	
+		<!--welcome-hero start -->
+		<!--
+		<section id="welcome-hero" class="welcome-hero">
+		-->
+		
+			<div style="background-color: #ABBAEA; background-image: url('/static/assets/images/about/xyz.jpg') ; padding-top:80px; background-size: cover;">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<div class="header-text" style="margin-top: 5%;">
+								<h2>hi <span>,</span> i am <br> Bhargab <br> Ganguli <span>.</span>   </h2>
+								<p>Fresher Diploma Engineer</p>
+								<a href="{% static 'assets/download/CV BHARGAB GANGULI.docx' %}" download style="margin-bottom: 2%;">download resume</a>
+
+							</div><!--/.header-text-->
+						</div><!--/.col-->
+					</div><!-- /.row-->
+				</div><!-- /.container-->
+			</div>
+			<!--
+		</section>
+	-->
+	
+		<!--/.welcome-hero-->
+		<!--welcome-hero end -->
+
+		<!--about start -->
+		<section id="about" class="about">
+			<div class="section-heading text-center">
+				<h2>about me</h2>
+			</div>
+			<div class="container">
+				<div class="about-content">
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="single-about-txt">
+								<h3>
+									I am a fresh diploma candidate in Electronics and Instrumentation engineering with a strong interest in the IT industry. I am passionate about technology and I am eager to learn and grow.
+								</h3>
+								<p>
+									I am particularly interested in the field of data science and visualization.
+									I have a strong foundation in electronics and instrumentation engineering, 
+									which gives me a unique perspective on sensors' data, PLC programming, transmitters, control valves.
+									I am a quick learner and I am eager to put my skills and knowledge to work.
+									In addition to my technical skills, I am also a good communicator and 
+									I am able to work independently and as part of a team. 
+									I am also a solution thinker.
+									I am excited to be starting my career in the IT industry and I look forward to connecting with you!
+								</p>
+								<div class="row">
+									<div class="col-sm-4">
+										<div class="single-about-add-info">
+											<h3>phone</h3>
+											<p style="color:black">700-322-6340</p>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="single-about-add-info">
+											<h3>email</h3>
+											<p style="color:black">bhargab.ganguli@gmail.com</p>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-offset-1 col-sm-5">
+							<div class="single-about-img">
+								<img src="{% static 'assets/images/about/dp2.jpg' %}" alt="profile_image">
+								<div class="about-list-icon">
+									<ul>
+										<li>
+											<a href="https://www.linkedin.com/in/bhargab-ganguli-570750195/" target="_blank">
+												<i  class="fa fa-linkedin" aria-hidden="true"></i>
+											</a>
+										</li><!-- / li -->
+											
+										</li><!-- / li -->
+										<li>
+											<a href="https://www.facebook.com/bangali.bhargab/" target="_blank">
+												<i  class="fa fa-facebook"" aria-hidden="true"></i>
+											</a>
+										</li><!-- / li -->
+
+										<li>
+											<a href="https://www.instagram.com/bhargabganguli/" target="_blank">
+												<i  class="fa fa-instagram" aria-hidden="true"></i>
+											</a>
+										</li><!-- / li -->
+										
+										
+									</ul><!-- / ul -->
+								</div><!-- /.about-list-icon -->
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!--/.about-->
+		<!--about end -->
+		
+		<!--education start -->
+		<section id="education" class="education">
+			<div class="section-heading text-center">
+				<h2>education</h2>
+			</div>
+			<div class="container">
+				<div class="education-horizontal-timeline">
+					<div class="row"   style="margin: left;width: 150%;padding: 0px;">
+						<div class="col-sm-4">
+							<div class="single-horizontal-timeline">
+								<div class="experience-time">
+									<h2>OCT 2020 - SEP 2023</h2>
+									<h3>Diploma Engineering <span>in </span><br> Electronics and Instrumentation</h3>
+								</div><!--/.experience-time-->
+								<div class="timeline-horizontal-border">
+									<i class="fa fa-circle" aria-hidden="true"></i>
+									<span class="single-timeline-horizontal"></span>
+								</div>
+								<div class="timeline">
+									<div class="timeline-content">
+										<h4 class="title">
+											<a href="https://www.facebook.com/BIT.KOL/" target="_blank" style="font-size: normal; color: black;">
+												Birla Institute of Technology
+											</a>
+										</h4>
+										<h5>Kolkata, West Bengal, India</h5>
+										<p class="description" style="color:black">
+											Scored: 92.7% and 9.7 OGPA
+											<br>
+											I have learned: Python Programming, PLC ladder logic, MCU 8051, HTML, JS, etc.
+										</p>
+									</div><!--/.timeline-content-->
+								</div><!--/.timeline-->
+							</div>
+						</div>
+
+						
+						<div class="col-sm-4">
+							<div class="single-horizontal-timeline">
+								<div class="experience-time">
+									<h2>JAN 2010 - JUL 2020</h2>
+									<h3>secondary <span>board </span> 
+										<br> examination (10th class)</h3>
+								</div><!--/.experience-time-->
+								<div class="timeline-horizontal-border">
+									<i class="fa fa-circle" aria-hidden="true"></i>
+									<span class="single-timeline-horizontal"></span>
+								</div>
+								<div class="timeline">
+									<div class="timeline-content">
+										<h4 class="title">
+											<a href="https://www.rkmissionrahara.org/" target="_blank" style="font-size: normal; color: black;">
+											Ramakrishna Mission Boys' Home, 
+											<br> Rahara
+											</a>
+										</h4>
+										<h5>Kolkata, West Bengal, India</h5>
+										<p class="description" style="color:black">
+										Successfully passed the first board exam  
+										<br>
+										with 642 marks out of 700 (91.7%). 
+										</p>
+									</div><!--/.timeline-content-->
+								</div><!--/.timeline-->
+							</div>
+						</div>				
+
+
+						
+					</div>
+				</div>
+			</div>
+
+		</section><!--/.education-->
+		<!--education end -->
+
+		<!--skills start -->
+		<section id="skills" class="skills">
+				<div class="skill-content">
+					<div class="section-heading text-center">
+						<h2>skills</h2>
+					</div>
+
+
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="single-skill-content">
+									
+									<div class="barWrapper">
+										<img src = "{% static 'assets/logo/checkbox.png' %}" alt="My Happy SVG" style="height: 30px; width: 30px;">
+										<span class="progressText" style="font-size: larger; color: black;">
+											HTML + CSS
+										</span>
+									</div><!-- /.barWrapper -->
+
+									<div class="barWrapper">
+										<img src = "{% static 'assets/logo/checkbox.png' %}" alt="My Happy SVG" style="height: 30px; width: 30px;">
+
+										<span class="progressText" style="font-size: larger; color: black;">
+											MS OFFICE
+										</span>
+									</div><!-- /.barWrapper -->
+
+									<div class="barWrapper">
+										<img src = "{% static 'assets/logo/checkbox.png' %}" alt="My Happy SVG" style="height: 30px; width: 30px;">
+
+										<span class="progressText" style="font-size: larger; color: black;">
+											TABLEAU + R COMMANDER
+										</span>
+									</div><!-- /.barWrapper -->
+
+									<div class="barWrapper">
+										<img src = "{% static 'assets/logo/checkbox.png' %}" alt="My Happy SVG" style="height: 30px; width: 30px;">
+
+										<span class="progressText" style="font-size: larger; color: black;">
+											MySQL
+										</span>
+									</div><!-- /.barWrapper -->
+
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="single-skill-content">
+									<div class="barWrapper">
+										<img src = "{% static 'assets/logo/checkbox.png' %}" alt="My Happy SVG" style="height: 30px; width: 30px;">
+										<span class="progressText" style="font-size: larger; color: black;">
+											Machine Learning using python
+										</span>
+									</div><!-- /.barWrapper -->
+
+									<div class="barWrapper">
+										<img src = "{% static 'assets/logo/checkbox.png' %}" alt="My Happy SVG" style="height: 30px; width: 30px;">
+										<span class="progressText" style="font-size: larger; color: black;">
+											Python Data Science modules (Pandas, Numpy, ...)
+										</span>
+									</div><!-- /.barWrapper -->
+
+									<div class="barWrapper">
+										<img src = "{% static 'assets/logo/checkbox.png' %}" alt="My Happy SVG" style="height: 30px; width: 30px;">
+										<span class="progressText" style="font-size: larger; color: black;">
+											C programming
+										</span>
+									</div><!-- /.barWrapper -->
+
+									<div class="barWrapper">
+										<img src = "{% static 'assets/logo/checkbox.png' %}" alt="My Happy SVG" style="height: 30px; width: 30px;">
+										<span class="progressText" style="font-size: larger; color: black;">
+											Django + MySQL
+										</span>
+									</div><!-- /.barWrapper -->
+
+								</div>
+							</div>
+						</div><!-- /.row -->
+					</div>	<!-- /.container -->		
+
+					<br><br><br>
+
+
+
+					<div class="container">
+						
+						  <div style="text-align: center; color: #000;"><b>Timeline of skill programs (GANTT CHART)</b></div>
+						  <div class="chartCard">
+							<div class="chartBox">
+							  <canvas id="myChart"></canvas>
+							</div>
+						  </div>
+
+						  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+			
+						  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+					  
+					  
+
+					</div>	
+				</div>
+
+		</section><!--/.skills-->
+		<!--skills end -->
+
+		<!--experience start -->
+		<section id="experience" class="experience">
+			<div class="section-heading text-center">
+				<h2>experience</h2>
+			</div>
+			<div class="container">
+				<div class="experience-content">
+						<div class="main-timeline">
+							<ul>
+								
+								<li>
+									<div class="single-timeline-box fix">
+										<div class="row">
+											<div class="col-md-5">
+												<div class="experience-time text-right">
+													<h2>FEB,2022 - AUG,2023</h2>
+													<h3 style="font-size: normal; color: black;">Junior data analyst</h3>
+												</div><!--/.experience-time-->
+											</div><!--/.col-->
+											<div class="col-md-offset-1 col-md-5">
+												<div class="timeline">
+													<div class="timeline-content">
+														<h4 class="title">
+															<span><i class="fa fa-circle" aria-hidden="true"></i></span>
+															<a href="https://www.businessbrio.com/" target="_blank" style="font-size: normal; color: black;">Business Brio</a>
+														</h4>
+														<h5>Kolkata, India</h5>
+														<p class="description">
+															Participated in two dummy projects and one real time project (US based).
+														</p>
+													</div><!--/.timeline-content-->
+												</div><!--/.timeline-->
+											</div><!--/.col-->
+										</div>
+									</div><!--/.single-timeline-box-->
+								</li>
+
+								
+
+								<li>
+									<div class="single-timeline-box fix">
+										<div class="row">
+											<div class="col-md-5">
+												<div class="experience-time text-right">
+													<h2>DEC,2021 - AUG,2022</h2>
+													<h3 style="font-size: normal; color: black;">Online & Ofline asistant-lecturer</h3>
+												</div><!--/.experience-time-->
+											</div><!--/.col-->
+											<div class="col-md-offset-1 col-md-5">
+												<div class="timeline">
+													<div class="timeline-content">
+														<h4 class="title">
+															<span><i class="fa fa-circle" aria-hidden="true"></i></span>
+															<a href="https://databrio.com/" target="_blank" style="font-size: normal; color: black;">Data Brio Academy</a>
+														</h4>
+														<h5>Kolkata, India</h5>
+														<p class="description">
+															Have shared knowledge on- SQLite, Decision Tree and Random Forest algorithm. 
+														</p>
+													</div><!--/.timeline-content-->
+												</div><!--/.timeline-->
+											</div><!--/.col-->
+										</div>
+									</div><!--/.single-timeline-box-->
+								</li>
+
+							</ul>
+						</div><!--.main-timeline-->
+					</div><!--.experience-content-->
+			</div>
+
+		</section><!--/.experience-->
+		<!--experience end -->
+
+		<!--profiles start -->
+		<section id="profiles" class="profiles">
+			<div class="profiles-details">
+				<div class="section-heading text-center">
+					<h2>profiles</h2>
+				</div>
+				<div class="container">
+					<div class="profiles-content">
+						<div class="row">
+							<div class="col-sm-3"> <!--column 1-->
+								
+							</div>
+
+							<div class="col-sm-3"><!-- column 2 -->
+								<div class="single-profile profile-no-border">
+									<div class="profile-txt">
+										<a href="https://github.com/bhargabganguli" target="_blank"><i class="flaticon-github-logo"></i></a>
+										<div class="profile-icon-name">github</div>
+									</div>
+									<div class="single-profile-overlay">
+										<div class="profile-txt">
+											<a href="https://github.com/bhargabganguli" target="_blank"><i class="flaticon-github-logo"></i></a>
+											<div class="profile-icon-name">github</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-3"> <!-- column 3 -->
+								<div class="single-profile profile-no-border">
+									<div class="profile-txt">
+										<a href="https://www.linkedin.com/in/bhargab-ganguli-570750195/" target="_blank"><i  class="fa fa-linkedin" aria-hidden="true"></i></a>
+										<div class="profile-icon-name">Linkedin</div>
+									</div>
+									<div class="single-profile-overlay">
+										<div class="profile-txt">
+											<a href="https://www.linkedin.com/in/bhargab-ganguli-570750195/" target="_blank"><i  class="fa fa-linkedin" aria-hidden="true"></i></a>
+											<div class="profile-icon-name">Linkedin</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-3"> <!-- column 4-->
+								
+							</div>
+
+
+						</div>
+						
+					</div>
+				</div>
+			</div>
+
+		</section><!--/.profiles-->
+		<!--profiles end -->
+
+		<!--portfolio start -->
+		<section id="projects"class="portfolio">
+			<div class="portfolio-details">
+				<div class="section-heading text-center">
+					<h2>Projects & Patents</h2>
+				</div>
+				<div class="container">
+					<div class="portfolio-content">
+						<div class="isotope">
+							<div class="row">
+
+								<div class="col-sm-4">
+									<div class="item" style=" height: 200px; width: 100% ">
+										<img src="{% static 'assets/images/project/s2l_project.png' %}" alt="portfolio image"/>
+										<div class="isotope-overlay" >
+											<a href="https://docs.google.com/presentation/d/1AGlV1zKH9w0pVpvcCq1x7DvzSES4fmJo/edit?usp=sharing&ouid=104024406309153180285&rtpof=true&sd=true" style="color: red; font-size: 20px;" target="_blank">
+												Speed to lead analysis 
+												<br>
+												US client BPO data analysis project
+											</a>
+										</div><!-- /.isotope-overlay -->
+									</div><!-- /.item -->
+									<div class="item" style=" height: 200px; width: 100% ">
+										
+										<img src="{% static 'assets/images/project/businessmodels_package.png' %}" alt="portfolio image"/>
+									
+										<div class="isotope-overlay" >
+											<a href="https://pypi.org/project/businessmodels/" style="color: red; font-size: 30px;" target="_blank">
+												businessmodels
+												<br>
+												Python package
+											</a>
+										</div><!-- /.isotope-overlay -->
+									</div><!-- /.item -->
+								</div><!-- /.col -->
+
+								<div class="col-sm-4">
+									<div class="item" style=" height: 200px; width: 100% ">
+										<img src="{% static 'assets/images/project/MMM.png' %}" alt="portfolio image"/>
+										<div class="isotope-overlay">
+											<a href="https://colab.research.google.com/drive/1HPX-FEaZBKKNOIaxktshHtknFe3IqLac?usp=sharing" style="color: red; font-size: 30px;" target="_blank">
+												Market Mix Modelling
+											</a>
+										</div><!-- /.isotope-overlay -->
+									</div><!-- /.item -->
+
+									
+										<div class="item" style=" height: 200px; width: 100% ">
+											<img src="{% static 'assets/images/project/web_dev.jpg' %}" alt="portfolio image"/>
+											<div class="isotope-overlay" style="color: rgb(241, 206, 6); font-size: 30px;">
+												
+													web development
+												
+											</div><!-- /.isotope-overlay -->
+										</div><!-- /.item -->
+									
+
+								</div><!-- /.col -->
+
+								<div class="col-sm-4">
+									<div class="item" style=" height: 200px; width: 100% ">
+										<img src="{% static 'assets/images/project/patent_applied.jpg' %}" alt="portfolio image"/>
+										<div class="isotope-overlay">
+											<a href="https://drive.google.com/file/d/16Gi_qxH6b-yPWptgjLgU1lgDPC7wUDN3/view?usp=sharing" style="color: rgb(223, 11, 11); font-size: 30px;" target="_blank">
+												Patent application 
+												<br>
+												on Percentile Significance 
+												<br>
+												statistical test
+											</a>
+										</div><!-- /.isotope-overlay -->
+									</div><!-- /.item -->
+
+									
+									<div class="item" style=" height: 200px; width: 100% ">
+											<img src="{% static 'assets/images/project/upcoming.png' %}" alt="portfolio image">
+											<div class="isotope-overlay" style="color: red; font-size: 30px;">
+												
+													To be added.....
+												
+											</div><!-- /.isotope-overlay -->
+									</div><!-- /.item -->
+								</div><!-- /.col -->
+
+							</div><!-- /.col -->
+								
+
+
+
+								
+							</div><!-- /.row -->
+						</div><!--/.isotope-->
+					</div><!--/.gallery-content-->
+				</div><!--/.container-->
+			</div><!--/.portfolio-details-->
+
+		</section><!--/.portfolio-->
+		<!--portfolio end -->
+
+		<!--clients start -->
+		<section id="orgs" class="clients">
+			<div class="section-heading text-center">
+				<h2>Organizations</h2>
+			</div>
+
+			<div class="clients-area">
+					<div style="padding: 10%;">
+						<a href="https://databrio.com/" target="_blank">
+							<img src="{% static 'assets/images/organizations/data_brio_academy.jpg' %}" alt="brand-image" style="height: 100px; width: 150px;" />
+						</a>
+					</div>
+
+					<div style="padding:10%;">
+						<a href="https://www.businessbrio.com/" target="_blank">
+							<img src="{% static 'assets/images/organizations/business_brio.jpg' %}" alt="brand-image" style="height: 100px; width: 150px;">
+						</a>
+					</div>
+
+					<div style="padding: 10%;">
+						<a href="https://www.facebook.com/profile.php?id=100063836832002" target="_blank">
+							<img src="{% static 'assets/images/organizations/debdut.jpg' %}" alt="brand-image" style="height: 100px; width: 150px;" />
+						</a>
+					</div>
+				
+				<!--
+				<div class="container">
+					<div class="owl-carousel owl-theme" id="client">
+						<div class="item">
+							<a href="https://databrio.com/" target="_blank">
+								<img src="{% static 'assets/images/organizations/data_brio_academy.jpg' %}" alt="brand-image" style="height: 100px; width: 150px;" />
+							</a>
+							
+						</div>
+						<div class="item">
+							<a href="https://www.businessbrio.com/" target="_blank">
+								<img src="{% static 'assets/images/organizations/business_brio.jpg' %}" alt="brand-image" style="height: 100px; width: 150px;">
+							</a>
+						</div>
+						<div class="item">
+							<a href="https://www.facebook.com/profile.php?id=100063836832002" target="_blank">
+								<img src="{% static 'assets/images/organizations/debdut.jpg' %}" alt="brand-image" style="height: 100px; width: 150px;" />
+							</a>
+						</div>	
+					</div>
+				</div>
+				-->
+			</div>
+
+		</section><!--/.clients-->
+
+		
+		<!--clients end -->
+
+		<section id="extracurricular_activity" class="extracurricular_activity">
+			<div class="skill-content">
+				
+				<div class="section-heading text-center">
+					<h2>extracurricular activities</h2>
+				</div>
+
+
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="single-skill-content">
+								
+								<div class="barWrapper">
+									<img src = "{% static 'assets/logo/music.png' %}" alt="My Happy SVG" style="height: 30px; width: 30px;">
+									<span class="progressText" style="font-size: larger; color: black;">
+										PLAYING VIOLIN
+									</span>
+								</div><!-- /.barWrapper -->
+
+												
+							</div>
+						</div>
+						
+						<div class="col-md-6">
+							<div class="single-skill-content">
+								
+								<div class="barWrapper">
+									<img src = "{% static 'assets/logo/microphone.png' %}" alt="My Happy SVG" style="height: 30px; width: 30px;">
+
+									<span class="progressText" style="font-size: larger; color: black;">
+										RECITING POEMS, STORIES
+									</span>
+								</div><!-- /.barWrapper -->	
+
+											
+							</div>
+						</div>
+
+					</div><!-- /.row -->
+				</div>	<!-- /.container -->		
+
+				
+
+				</div>	
+			</div>
+		</section>
+		<!--contact start -->
+		<section id="contact" class="contact">
+			<div class="section-heading text-center">
+				<h2>contact me</h2>
+			</div>
+			<div class="container">
+				<div class="contact-content">
+					<p>* This form will send your mentioned mail-id, name, subject and message to me.</p>
+					
+					<div class="row">
+						<div class="col-md-offset-1 col-md-5 col-sm-6">
+							<div class="single-contact-box">
+								<div class="contact-form">
+
+									{% if mail %}
+
+									
+									<form id="mail_to_me" action="/mail/" class="mail" method="POST" enctype="multipart/form-data">
+										{% csrf_token %}
+										<div class="row">
+											<div class="col-sm-6 col-xs-12">
+												<div class="form-group">
+												  <input type="text" class="form-control" id="name" placeholder="Name*" name="name">
+												</div><!--/.form-group-->
+											</div><!--/.col-->
+											<div class="col-sm-6 col-xs-12">
+												<div class="form-group">
+													<input type="email" class="form-control" id="email" placeholder="Email*" name="email">
+												</div><!--/.form-group-->
+											</div><!--/.col-->
+										</div><!--/.row-->
+										<div class="row">
+											<div class="col-sm-12">
+												<div class="form-group">
+													<input type="text" class="form-control" id="subject" placeholder="Subject" name="subject">
+												</div><!--/.form-group-->
+											</div><!--/.col-->
+										</div><!--/.row-->
+										<div class="row">
+											<div class="col-sm-12">
+												<div class="form-group">
+													<textarea class="form-control" rows="8" id="message" placeholder="Message" name="message"></textarea>
+												</div><!--/.form-group-->
+											</div><!--/.col-->
+										</div><!--/.row-->
+										<div class="row">
+
+											<div class="col-sm-12">
+												<button style="color: wheat; width: 100%;" onclick="loader();">
+												<div class="single-contact-btn">
+													submit
+												</div><!--/.single-single-contact-btn-->
+												</button>
+											</div><!--/.col-->
+										</div><!--/.row-->
+									</form><!--/form-->
+
+									{% else %}
+									<p> {{data}} You have already sent a mail.</p>
+									<p>To sent once more mail please clear your browser cookies and then refresh the page</p>
+
+									{% endif %}
+
+								</div><!--/.contact-form-->
+							</div><!--/.single-contact-box-->
+						</div><!--/.col-->
+						<div class="col-md-offset-1 col-md-5 col-sm-6">
+							<div class="single-contact-box">
+								<div class="contact-adress">
+									<div class="contact-add-head">
+										<h3>Bhargab Ganguli</h3>
+										<p>Fresher Diploma</p>
+									</div>
+									<div class="contact-add-info">
+										<div class="single-contact-add-info">
+											<h3>phone</h3>
+											<p>700-322-6340</p>
+										</div>
+										<div class="single-contact-add-info">
+											<h3>email</h3>
+											<p>bhargab.ganguli@gmail.com</p>
+										</div>
+										
+									</div>
+								</div><!--/.contact-adress-->
+								<div class="hm-foot-icon">
+									<ul>
+										<li><a href="https://www.facebook.com/bangali.bhargab/" target="_blank"><i class="fa fa-facebook"></i></a></li><!--/li-->
+										<li><a href="https://www.linkedin.com/in/bhargab-ganguli-570750195/" target="_blank"><i class="fa fa-linkedin"></i></a></li><!--/li-->
+										<li><a href="https://www.instagram.com/bhargabganguli/" target="_blank"><i class="fa fa-instagram"></i></a></li><!--/li-->
+									</ul><!--/ul-->
+								</div><!--/.hm-foot-icon-->
+							</div><!--/.single-contact-box-->
+						</div><!--/.col-->
+					</div><!--/.row-->
+				</div><!--/.contact-content-->
+			</div><!--/.container-->
+
+		</section><!--/.contact-->
+		<!--contact end -->
+
+		<!-- This <div class="overlay"></div> is to load the loader.gif-->
+		<div class="overlay"></div>
+
+		<!--footer-copyright start-->
+		<footer id="footer-copyright" class="footer-copyright">
+			<div class="container">
+				<div class="hm-footer-copyright text-center">
+					<p>Developed using django</p>
+					</p><!--/p-->
+				</div><!--/.text-center-->
+			</div><!--/.container-->
+
+			<div id="scroll-Top">
+				<div class="return-to-top">
+					<i class="fa fa-angle-up " id="scroll-top" style="color: black;"></i>
+				</div>
+				
+			</div><!--/.scroll-Top-->
+		
+        </footer><!--/.footer-copyright-->
+		<!--footer-copyright end-->
+		
+		<!-- Include all js compiled plugins (below), or include individual files as needed -->
+
+		<script src="{% static 'assets/js/jquery.js' %}"></script>
+        
+        <!--modernizr.min.js
+        <script src="{% static 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js' %}"></script>
+		-->
+
+		<!--bootstrap.min.js-->
+        <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+		
+		<!-- bootsnav js -->
+		<script src="{% static 'assets/js/bootsnav.js' %}"></script>
+		
+		<!-- jquery.sticky.js -->
+		<script src="{% static 'assets/js/jquery.sticky.js' %}"></script>
+		
+		<!-- for progress bar start-->
+
+		<!-- progressbar js -->
+		<script src="{% static 'assets/js/progressbar.js' %}"></script>
+
+		<!-- appear js -->
+		<script src="{% static 'assets/js/jquery.appear.js' %}"></script>
+
+		<!-- for progress bar end -->
+
+		<!--owl.carousel.js-->
+        <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+		
+        
+        <!--Custom JS-->
+        <script src="{% static 'assets/js/custom.js' %}"></script>
+        
+		<!--
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+		-->
+		
+
+		<script>
+			function loader()
+			{
+			  $("body").addClass("loading");
+			   //$("body").removeClass("loading");
+		  
+			}
+			
+		  </script>
+
+
+<script>
+    // setup 
+    const data = {
+      				labels: ['HTML+CSS','MS-OFFICE','TABLEAU + R commander', 'MySQL', 'ML models', 'Pandas+Statsmodels+Numpy','C PROGRAMMING', 'Django+MySQL'],
+					datasets: [{
+									label: 'SKILLS LEARNED',
+									data: [
+											['01-01-2017', '31-12-2017'], // html+css: 1 year
+											
+											['01-01-2018', '31-12-2018'], // ms excel: 1 year
+											['01-03-2020', '30-04-2021'], // tableau: 
+											['01-01-2021', '30-04-2021'], // mysql
+											['01-05-2021', '30-11-2021'], // ml models
+											['01-08-2021', '30-11-2021'], // pandas+statsmodels
+											['03-01-2022', '25-03-2022'], // c programming
+											['01-09-2022', '28-02-2022'], // django+mysql
+											
+						
+										],
+									backgroundColor: 
+									[
+										'rgba(255, 26, 104, 1)',
+										'rgba(54, 162, 235, 1)',
+										'rgba(255, 206, 86, 1)',
+										'rgba(75, 192, 192, 1)',
+										'rgba(153, 102, 255, 1)',
+										'rgba(255, 159, 64, 1)',
+										'rgba(0, 0, 0, 1)'
+									],
+									borderColor: 
+									[
+										'rgba(255, 26, 104, 1)',
+										'rgba(54, 162, 235, 1)',
+										'rgba(255, 206, 86, 1)',
+										'rgba(75, 192, 192, 1)',
+										'rgba(153, 102, 255, 1)',
+										'rgba(255, 159, 64, 1)',
+										'rgba(0, 0, 0, 1)'
+									],
+							barPercentage: 0.7,
+      						}]
+    		};
+
+    // config 
+    const config = {
+      type: 'bar',
+      data,
+      options: {
+		maintainAspectRatio: false,
+	
+		plugins: 
+		{
+			legend: 
+			{
+      			display: false // <-- this hides the legends
+    		},
+
+    	  	tooltip: 
+			{
+				callbacks: {
+                        title: context => {
+							console.log(context)
+							const d= new Date(context[0].parsed.x);
+							const formattedDate=d.toLocaleDateString([], {
+								month: 'short',
+								year: 'numeric',
+							});
+							return "ended on: "+formattedDate
+						},
+
+						label: function(tooltipItem, data) {
+                            return "";
+                        },
+
+                    },
+					
+        		enabled: true // <-- this option disables tooltips
+      		}
+    	},
+	  	indexAxis: 'y',
+        scales: {
+		x:{
+			min:'01-01-2017',
+			max:'31-03-2023',
+			type:'time',
+
+			time:{
+				unit:'day',
+				parser: 'dd-MM-yyyy',
+				
+				displayFormats: {
+                        
+						'day': 'MMM yy',
+						
+                    },
+			
+			}
+		},
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    };
+
+    // render init block
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+
+    // Instantly assign Chart.js version
+    const chartVersion = document.getElementById('chartVersion');
+    //chartVersion.innerText = Chart.version;
+
+		
+
+    </script>
+
+	
+
+      	
+		  {% if messages %}
+		  {% for message in messages %}
+		  {% if message.tags %}
+		  <script>alert("{{message}}")</script>
+		  {% endif %}
+		  {% endfor %}
+		{% endif %}
+    </body>
+	
+</html>
